@@ -1,0 +1,22 @@
+{
+    "name": "killmenot/undo-seeder-laravel",
+    "description": "A way to rollback seeds in Laravel",
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/database": "5.1.*",
+        "illuminate/console": "5.1.*",
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Kucherenko",
+            "email": "alexey@intspirit.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Intspirit\\UndoSeeder\\": "src"
+        }
+    },
+    "minimum-stability": "dev"
+}
