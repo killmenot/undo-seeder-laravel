@@ -3,6 +3,7 @@
 namespace Intspirit\UndoSeeder;
 
 use Intspirit\UndoSeeder\Console\Seeds\SeedUndoCommand;
+use Intspirit\UndoSeeder\Console\Seeds\SeedRefreshCommand;
 use Illuminate\Support\ServiceProvider;
 
 class UndoSeederServiceProvider extends ServiceProvider {
