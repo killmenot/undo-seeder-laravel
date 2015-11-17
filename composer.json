@@ -15,7 +15,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Intspirit\\UndoSeeder\\": "src"
+            "Intspirit\\UndoSeeder\\": "src/"
         }
     },
     "minimum-stability": "dev"
