@@ -58,7 +58,7 @@ class SeedUndoCommand extends Command
 
         $this->resolver->setDefaultConnection($this->getDatabase());
 
-        $this->getSeeder()->undo();
+        $this->getSeeder()->down();
     }
 
     /**
