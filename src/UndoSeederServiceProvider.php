@@ -22,9 +22,11 @@ class UndoSeederServiceProvider extends ServiceProvider {
     public function register()
     {
         $this->registerSeedUndoCommand();
+        $this->registerSeedRefreshCommand();
 
         $this->commands([
-            'command.db.seed.undo'
+            'command.db.seed.undo',
+            'command.db.seed.refresh'
         ]);
     }
 
@@ -41,13 +43,25 @@ class UndoSeederServiceProvider extends ServiceProvider {
     }
 
     /**
+     * Register the seed refresh console command.
+     *
+     * @return void
+     */
+    protected function registerSeedRefreshCommand()
+    {
+        $this->app->singleton('command.db.seed.refresh', function ($app) {
+            return new SeedRefreshCommand($app['db']);
+        });
+    }
+
+    /**
      * Get the services provided by the provider.
      *
      * @return array
      */
     public function provides()
     {
-        return ['command.db.seed.undo'];
+        return ['command.db.seed.undo', 'command.db.seed.refresh'];
     }
 
 }
