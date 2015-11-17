@@ -36,7 +36,7 @@ class UndoSeederServiceProvider extends ServiceProvider {
     protected function registerSeedUndoCommand()
     {
         $this->app->singleton('command.db.seed.undo', function ($app) {
-            return new SeedUndoCommand;
+            return new SeedUndoCommand($app['db']);
         });
     }
 
