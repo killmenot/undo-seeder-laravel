@@ -3,7 +3,8 @@
 Features
 ========
 
-- Allows to have up and down method for every seed Allows you to seed databases in different environments with different values.
+- Allows to have `up` and `down` method for every seed. (Your seeds should be inherited from `Intspirit\UndoSeeder\UndoSeeder` and override `up` and `down` methods)
+- Ability to call undo for other seeds using `undo` method.
 
 
 Use
